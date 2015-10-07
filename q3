@@ -18,3 +18,6 @@ puts "Enter Count Down Number"
 num = gets.to_i
 puts "count down start "
 count_down_to_zero(num)
+
+
+#question no #3
