@@ -1,0 +1,23 @@
+#!/usr/bin/ruby
+
+
+#Write a method that counts down to zero using recursion.
+
+
+
+def count_down_to_zero(count)
+  if(count==0)
+      puts count
+    return count
+  else
+    puts count
+    count_down_to_zero(count-1)
+  end
+end
+puts "Enter Count Down Number"
+num = gets.to_i
+puts "count down start "
+count_down_to_zero(num)
+
+
+#question no #3
