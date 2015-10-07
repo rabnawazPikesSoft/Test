@@ -1,0 +1,72 @@
+
+#!/usr/bin/ruby
+
+#Moudle 
+
+module MyModule 
+  GOODMOOD= "HAPPY"  
+  BADMOOD= "badMOOD"
+  def mood
+    return "i m #{GOODMOOD} what about you"
+  end
+
+ 
+ def MyModule.mood
+  return "i m #{BADMOOD} and felling hungry "
+  end
+end
+
+
+#CLASS PERSON
+
+class Person
+  include MyModule 
+  attr_reader:age
+  def initialize(aAge)
+    @age=aAge
+  end
+
+  
+  
+  def set_age(aAge)
+    @age=aAge
+  end
+
+  def get_age
+    return @age
+  end
+
+
+  def show
+    puts (mood)
+    puts (@age)
+  end
+
+  def printTable(num)
+    for i in 0..10
+    
+      puts "#{num} * #{i} = #{num*i} "
+    end
+  end
+end
+
+puts "Enter Age "
+aage=gets.to_i
+obj = Person.new(aage) 
+obj.set_age(aage)
+
+obj.show
+puts obj.get_age
+obj.printTable(aage)
+
+a=5
+b=8
+c=a+b
+p(c)
+
+
+
+
+
+
+
